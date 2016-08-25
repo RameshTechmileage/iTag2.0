@@ -1,0 +1,88 @@
+<div class="container" ng-app="mainApp" ng-controller="homeController">
+	<form class="form-horizontal" novalidate>
+	<!-- <form novalidate class="simple-form">  -->
+		<h2 class="vertical-center">CREATE NEW DATA LAYER</h2>
+		<div class="form-group">
+			<label for="firstName" class="col-sm-3 control-label">Country</label>
+			<div class="col-sm-3">
+				<!-- <select id="country" class="form-control" ng-model="country">
+					<option ng-repeat="pageInfo in data" value="{{pageInfo.name}}">{{pageInfo.country}}</option>
+				</select> -->
+				 <select id="country" class="form-control" ng-model="pageInfo.states" ng-options="countryName.country for countryName in data">
+                    <option value=''>Select</option>
+                </select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="email" class="col-sm-3 control-label">Language</label>
+			<div class="col-sm-3">
+				<select id="language" class="form-control disabled" ng-disabled="!pageInfo.states" ng-model="pageInfo.language">
+					<option>English</option>
+					<option>Spanish</option>
+				</select>
+			</div>
+		</div>
+		
+		<!--  <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Test</label>
+                     <div class="col-sm-3">
+	                  <input type="text" ng-model="test>
+                     </div>
+                </div> -->
+		<div class="form-group">
+			<label for="password" class="col-sm-3 control-label">Page Id</label>
+			<div class="col-sm-3">
+				<select id="country" class="form-control" ng-disabled="!pageInfo.language" ng-model="pageInfo.pageId">
+					<option>A1001</option>
+					<option>A1002</option>
+					<option>A1003</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="pageName" class="col-sm-3 control-label">Page
+				Name</label>
+			<div class="col-sm-3">
+				<select id="country" class="form-control" ng-disabled="!pageInfo.pageId"	ng-model="pageInfo.pageName">
+					<option>Home</option>
+					<option>Details</option>
+					<option>Cart</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="businessUnit" class="col-sm-3 control-label">Business
+				Unit</label>
+			<div class="col-sm-3">
+				<select id="country" class="form-control" ng-disabled="!pageInfo.pageName" ng-model="pageInfo.businessUnit">
+					<option>Amex1</option>
+					<option>Amex2</option>
+					<option>Amex3</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="businessCat" class="col-sm-3 control-label">Business
+				Category</label>
+			<div class="col-sm-3">
+				<select id="country" class="form-control" ng-disabled="!pageInfo.businessUnit" ng-model="pageInfo.businessCategory">
+					<option>IT</option>
+					<option>Development</option>
+					<option>Managment</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-2 col-sm-offset-3">
+				<a href="#/dashboard"><button type="submit"
+						class="btn btn-primary btn-block">Dashboard</button></a>
+			</div>
+			<div class="col-sm-2">
+				<a href="#/userInfo"><button type="submit"
+						class="btn btn-primary btn-block" ng-click="savePageInfo(pageInfo)">Next</button></a>
+						<!-- <input type="submit" value="andNew" ng-submit="addnew()"> -->
+			</div>
+
+		</div>
+	</form>
+</div>

@@ -1,0 +1,4 @@
+com\amex\itag\repository\ITagRepository.class
+com\amex\itag\controller\ITagController.class
+com\amex\itag\model\PageInfo.class
+com\amex\itag\controller\HomeController.class

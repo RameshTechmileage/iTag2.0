@@ -1,0 +1,179 @@
+<div class="container" ng-controller="eventInfoController">
+	<form class="form-horizontal" role="form">
+		<h2 class="vertical-center">Review Info</h2>
+		<h2>Page Info</h2>
+		<!-- <div>{{selectedData | json}}</div> -->
+		<div>{{selectedData[1].states.country}}</div>
+		<div>{{selectedData[1].accountStatus}}</div>
+		<div class="form-group">
+			<label for="firstName" class="col-sm-3 control-label">Country</label>
+			<div class="col-sm-3">
+				<!-- <select id="country" class="form-control"
+					ng-model="selectedData[0].states.country">
+					<option ng-repeat="selectedData[0]" value="{{x.name}}">{{x.name}}</option>
+				</select> -->
+				<select class="form-control" ng-disabled="true"><option>{{selectedData[0].states.country}}</option></select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="email" class="col-sm-3 control-label">Language</label>
+			<div class="col-sm-3">
+				<select id="language" class="form-control" ng-disabled="true">
+					<option>{{selectedData[0].language}}</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="password" class="col-sm-3 control-label">Page Id</label>
+			<div class="col-sm-3">
+				<select id="country" class="form-control" ng-disabled="true">
+					<option>{{selectedData[0].pageId}}</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="pageName" class="col-sm-3 control-label">Page
+				Name</label>
+			<div class="col-sm-3">
+				<select id="country" class="form-control" ng-disabled="true">
+					<option>{{selectedData[0].pageName}}</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="businessUnit" class="col-sm-3 control-label">Business
+				Unit</label>
+			<div class="col-sm-3">
+				<select id="country" class="form-control" ng-disabled="true">
+					<option>{{selectedData[0].businessUnit}}</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="businessCat" class="col-sm-3 control-label">Business
+				Category</label>
+			<div class="col-sm-3">
+				<select id="country" class="form-control" ng-disabled="true">
+					<option>{{selectedData[0].businessCategory}}</option>
+				</select>
+			</div>
+		</div>
+		<h2>User Info</h2>
+		<div class="form-group">
+			<label class="control-label col-sm-3">Access Level</label>
+			<div class="col-sm-9">
+				<div class="checkbox">
+					<label> <input type="checkbox" id="calorieCheckbox" ng-disabled="true"
+						ng-model="selectedData[1].accessLevel">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-3">Account Status</label>
+			<div class="col-sm-9">
+				<div class="checkbox">
+					<label> <input type="checkbox" id="calorieCheckbox" ng-disabled="true"
+						ng-model="selectedData[1].accountStatus">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-3">Account Tenure</label>
+			<div class="col-sm-9">
+				<div class="checkbox">
+					<label> <input type="checkbox" id="calorieCheckbox" ng-disabled="true"
+						ng-model="selectedData[1].accountTenure">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-3">Industry Code</label>
+			<div class="col-sm-9">
+				<div class="checkbox">
+					<label> <input type="checkbox" id="calorieCheckbox" ng-disabled="true"
+						ng-model="selectedData[1].industryCode">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-3">SE Number</label>
+			<div class="col-sm-9">
+				<div class="checkbox">
+					<label> <input type="checkbox" id="calorieCheckbox" ng-disabled="true"
+						ng-model="selectedData[1].seNumber">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-3">Meal Preference<span></span></label>
+			<div class="col-sm-9">
+				<div class="checkbox">
+					<label> <input type="checkbox" id="calorieCheckbox" ng-disabled="true"
+						ng-model="selectedData[1].mealPreference">
+					</label>
+				</div>
+			</div>
+		</div>
+		<h2>Event Info</h2>
+		<div class="form-group">
+			<label class="control-label col-sm-3">Event Action</label>
+			<div class="col-sm-9">
+				<div class="checkbox">
+					<label> <input type="checkbox" id="calorieCheckbox" ng-disabled="true"
+						ng-model="selectedData[2].eventAction">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-3">Event Description</label>
+			<div class="col-sm-9">
+				<div class="checkbox">
+					<label> <input type="checkbox" id="calorieCheckbox" ng-disabled="true"
+						ng-model="selectedData[2].description">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-3">Event Name</label>
+			<div class="col-sm-9">
+				<div class="checkbox">
+					<label> <input type="checkbox" id="calorieCheckbox" ng-disabled="true"
+						ng-model="selectedData[2].eventName">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-3">Event Type</label>
+			<div class="col-sm-9">
+				<div class="checkbox">
+					<label> <input type="checkbox" id="calorieCheckbox" ng-disabled="true"
+						ng-model="selectedData[2].eventType">
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-2 col-sm-offset-3">
+				<a href="#/eventInfo"><button type="submit"
+						class="btn btn-primary btn-block">Previous</button></a>
+			</div>
+			<div class="col-sm-2">
+				<a href="#/review"><button type="submit"
+						class="btn btn-primary btn-block"
+						ng-click="saveDetails()">Submit</button></a>
+			</div>
+			<div class="col-sm-2">
+				<a href="#/dashboard"><button type="submit"
+						class="btn btn-primary btn-block">Dashboard</button></a>
+			</div>
+		</div>
+	</form>
+</div>
